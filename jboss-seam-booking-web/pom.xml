@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.jboss.seam.examples</groupId>
+    <artifactId>jboss-seam-booking</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>jboss-seam-booking-web</artifactId>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <dependency>
+       <groupId>org.jboss.seam.examples</groupId>
+       <artifactId>jboss-seam-booking-ejb</artifactId>
+       <type>ejb</type>
+       <version>0.0.1-SNAPSHOT</version>
+       <!-- <scope>provided</scope> -->
+    </dependency>
+    
+  </dependencies>
+  
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>${version.war.plugin}</version>
+        <configuration>
+           <!-- Java EE 7 doesn't require web.xml, Maven needs to catch up! -->
+           <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+   </build>
+</project>
