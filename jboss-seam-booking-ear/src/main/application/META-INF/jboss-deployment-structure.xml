@@ -5,7 +5,7 @@
       <module name="com.sun.jsf-impl" slot="mojarra-1.2" export="true"/>
     </dependencies>
   </deployment>
-  <sub-deployment name="jboss-seam-booking.war">
+  <sub-deployment name="jboss-seam-booking-web.war">
     <exclusions>
       <module name="javax.faces.api" slot="main"/>
       <module name="com.sun.jsf-impl" slot="main"/>
