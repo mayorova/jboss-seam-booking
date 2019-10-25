@@ -28,10 +28,21 @@
     <version.surefire.plugin>2.16</version.surefire.plugin>
     <version.war.plugin>2.5</version.war.plugin>
 
+    <!-- Seam version -->
+    <version.seam>2.2.0.GA</version.seam>
+
   </properties>
   
   <dependencyManagement>
     <dependencies>
+
+      <dependency>
+        <groupId>org.jboss.seam</groupId>
+        <artifactId>parent</artifactId>
+        <version>${version.seam}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
       <!-- Define the version of the EJB jar so that we don't need 
           to repeat ourselves in every module -->

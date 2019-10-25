@@ -23,6 +23,28 @@
       <artifactId>jboss-seam-booking-ejb</artifactId>
       <type>ejb</type>
     </dependency>
+    <dependency>
+      <groupId>org.jboss.seam</groupId>
+      <artifactId>jboss-seam</artifactId>
+      <type>ejb</type>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.el</groupId>
+          <artifactId>el-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.el</groupId>
+      <artifactId>jboss-el</artifactId>
+      <type>jar</type>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.el</groupId>
+          <artifactId>el-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
 
   <build>
@@ -38,13 +60,31 @@
           <!-- Use Java EE ear libraries as needed. Java EE ear libraries 
             are in easy way to package any libraries needed in the ear, and automatically 
             have any modules (EJB-JARs and WARs) use them -->
+          <generateApplicationXml>true</generateApplicationXml>
           <defaultLibBundleDir>lib</defaultLibBundleDir>
           <fileNameMapping>no-version</fileNameMapping>
+          <initializeInOrder>true</initializeInOrder>
           <modules>
+            <jarModule>
+              <groupId>org.jboss.el</groupId>
+              <artifactId>jboss-el</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <bundleDir>lib</bundleDir>
+            </jarModule>
+            <ejbModule>
+              <groupId>org.jboss.seam</groupId>
+              <artifactId>jboss-seam</artifactId>
+              <bundleFileName>jboss-seam.jar</bundleFileName>
+            </ejbModule>
+            <ejbModule>
+              <groupId>org.jboss.seam.example</groupId>
+              <artifactId>jboss-seam-booking-ejb</artifactId>
+              <bundleFileName>jboss-seam-booking-ejb.jar</bundleFileName>
+            </ejbModule>
             <webModule>
               <groupId>org.jboss.seam.example</groupId>
               <artifactId>jboss-seam-booking-web</artifactId>
-              <uri>jboss-seam-booking-web.war</uri>
+              <bundleFileName>jboss-seam-booking-web.war</bundleFileName>
               <contextRoot>/seam-booking</contextRoot>
             </webModule>
           </modules>
