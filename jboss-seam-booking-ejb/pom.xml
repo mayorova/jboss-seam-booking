@@ -11,7 +11,7 @@
   <packaging>ejb</packaging>
 
   <dependencies>
-     <dependency>
+    <dependency>
       <groupId>org.jboss.seam</groupId>
       <artifactId>jboss-seam</artifactId>
       <scope>provided</scope>
@@ -38,13 +38,13 @@
         <exclusion>
           <groupId>javassist</groupId>
           <artifactId>javassist</artifactId>
-        </exclusion>								
-      </exclusions>			
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <scope>compile</scope>
+      <version>3.1.0.GA</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -66,8 +66,15 @@
       <artifactId>persistence-api</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <!-- The actual version is 5.9 (from seam/build/root.pom.xml), but it is not found in the repository -->
+      <version>6.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-  
+
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
@@ -77,6 +84,7 @@
         <configuration>
           <!-- Tell Maven we are using EJB 3.1 -->
           <ejbVersion>3.1</ejbVersion>
+          <!--
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
@@ -84,6 +92,7 @@
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
           </archive>
+          -->
         </configuration>
       </plugin>
     </plugins>
