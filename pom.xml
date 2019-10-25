@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>org.jboss.seam.examples</groupId>
+  <groupId>org.jboss.seam.example</groupId>
   <artifactId>jboss-seam-booking</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -36,8 +36,8 @@
       <!-- Define the version of the EJB jar so that we don't need 
           to repeat ourselves in every module -->
       <dependency>
-        <groupId>org.jboss.tools.example</groupId>
-        <artifactId>jboss-javaee-multi-ejb</artifactId>
+        <groupId>org.jboss.seam.example</groupId>
+        <artifactId>jboss-seam-booking-ejb</artifactId>
         <version>${project.version}</version>
         <type>ejb</type>
       </dependency>
@@ -45,8 +45,8 @@
       <!-- Define the version of the WAR so that we don't need to repeat 
           ourselves in every module -->
       <dependency>
-        <groupId>org.jboss.tools.example</groupId>
-        <artifactId>jboss-javaee-multi-web</artifactId>
+        <groupId>org.jboss.seam.example</groupId>
+        <artifactId>jboss-seam-booking-web</artifactId>
         <version>${project.version}</version>
         <type>war</type>
         <scope>compile</scope>

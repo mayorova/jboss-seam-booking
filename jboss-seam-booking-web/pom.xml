@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.jboss.seam.examples</groupId>
+    <groupId>org.jboss.seam.example</groupId>
     <artifactId>jboss-seam-booking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -12,7 +12,7 @@
 
   <dependencies>
     <dependency>
-       <groupId>org.jboss.seam.examples</groupId>
+       <groupId>org.jboss.seam.example</groupId>
        <artifactId>jboss-seam-booking-ejb</artifactId>
        <type>ejb</type>
        <version>0.0.1-SNAPSHOT</version>

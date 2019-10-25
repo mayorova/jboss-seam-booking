@@ -3,7 +3,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.jboss.seam.examples</groupId>
+    <groupId>org.jboss.seam.example</groupId>
     <artifactId>jboss-seam-booking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
@@ -42,7 +42,7 @@
           <fileNameMapping>no-version</fileNameMapping>
           <modules>
             <webModule>
-              <groupId>org.jboss.seam.examples</groupId>
+              <groupId>org.jboss.seam.example</groupId>
               <artifactId>jboss-seam-booking-web</artifactId>
               <uri>jboss-seam-booking-web-0.0.1-SNAPSHOT.war</uri>
               <contextRoot>/seam-booking</contextRoot>
