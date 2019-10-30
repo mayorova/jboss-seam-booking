@@ -34,6 +34,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+
     <dependency>
       <groupId>org.jboss.el</groupId>
       <artifactId>jboss-el</artifactId>
@@ -45,6 +46,50 @@
         </exclusion>
       </exclusions>
     </dependency>
+
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant-antlr</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>antlr</groupId>
+      <artifactId>antlr</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.beanshell</groupId>
+      <artifactId>bsh</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>javassist</groupId>
+      <artifactId>javassist</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <type>jar</type>
+    </dependency>
+
+
+
   </dependencies>
 
   <build>
@@ -63,14 +108,63 @@
           <generateApplicationXml>true</generateApplicationXml>
           <defaultLibBundleDir>lib</defaultLibBundleDir>
           <fileNameMapping>no-version</fileNameMapping>
-          <initializeInOrder>true</initializeInOrder>
+          <!-- <initializeInOrder>true</initializeInOrder> -->
           <modules>
             <jarModule>
               <groupId>org.jboss.el</groupId>
               <artifactId>jboss-el</artifactId>
               <includeInApplicationXml>false</includeInApplicationXml>
-              <bundleDir>lib</bundleDir>
+              <!-- <bundleDir>lib</bundleDir> -->
             </jarModule>
+            <jarModule>
+              <groupId>dom4j</groupId>
+              <artifactId>dom4j</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>org.apache.ant</groupId>
+              <artifactId>ant-antlr</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>antlr</groupId>
+              <artifactId>antlr</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>org.beanshell</groupId>
+              <artifactId>bsh</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>commons-beanutils</groupId>
+              <artifactId>commons-beanutils</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>commons-collections</groupId>
+              <artifactId>commons-collections</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>javassist</groupId>
+              <artifactId>javassist</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+            <jarModule>
+              <groupId>org.hibernate</groupId>
+              <artifactId>hibernate-validator</artifactId>
+              <includeInApplicationXml>false</includeInApplicationXml>
+              <!-- <bundleDir>lib</bundleDir> -->
+            </jarModule>
+
             <ejbModule>
               <groupId>org.jboss.seam</groupId>
               <artifactId>jboss-seam</artifactId>
