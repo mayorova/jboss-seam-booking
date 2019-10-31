@@ -29,7 +29,9 @@
     <version.war.plugin>2.5</version.war.plugin>
 
     <!-- Seam version -->
-    <version.seam>2.2.0.GA</version.seam>
+    <!-- <version.seam>2.2.0.GA</version.seam> -->
+    <!-- <version.seam>2.2.2.Final</version.seam> -->
+    <version.seam>2.2.6.EAP5</version.seam>
 
   </properties>
   

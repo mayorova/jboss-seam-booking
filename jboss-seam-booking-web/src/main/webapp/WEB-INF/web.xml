@@ -52,8 +52,8 @@
     </context-param>
 
     <context-param>
-      <param-name>com.sun.faces.injectionProvider</param-name>
-      <param-value>org.jboss.as.jsf.injection.JSFInjectionProvider</param-value>
+        <param-name>com.sun.faces.injectionProvider</param-name>
+        <param-value>org.jboss.as.jsf.injection.JSFInjectionProvider</param-value>
     </context-param>
 
     <servlet>
