@@ -117,7 +117,7 @@
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
+    <finalName>${project.parent.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -208,12 +208,12 @@
             <ejbModule>
               <groupId>org.jboss.seam.example</groupId>
               <artifactId>jboss-seam-booking-ejb</artifactId>
-              <bundleFileName>jboss-seam-booking-ejb.jar</bundleFileName>
+              <bundleFileName>jboss-seam-booking.jar</bundleFileName>
             </ejbModule>
             <webModule>
               <groupId>org.jboss.seam.example</groupId>
               <artifactId>jboss-seam-booking-web</artifactId>
-              <bundleFileName>jboss-seam-booking-web.war</bundleFileName>
+              <bundleFileName>jboss-seam-booking.war</bundleFileName>
               <contextRoot>/seam-booking</contextRoot>
             </webModule>
           </modules>
@@ -227,7 +227,7 @@
         <groupId>org.wildfly.plugins</groupId>
         <artifactId>wildfly-maven-plugin</artifactId>
         <configuration>
-          <filename>${project.artifactId}.ear</filename>
+          <filename>${project.parent.artifactId}.ear</filename>
           <skip>false</skip>
         </configuration>
       </plugin>
